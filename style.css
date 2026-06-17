@@ -296,6 +296,61 @@ body {
     opacity: 0.6;
 }
 
+/* Racing Lights Custom Design */
+.traffic-light-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.light-post {
+    background-color: #222222;
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    gap: 15px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.2);
+    border: 2px solid #333;
+}
+
+.light {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #333333; /* Patay na ilaw base color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    border: 3px solid #111;
+}
+
+.light-text {
+    font-family: 'Bangers', cursive;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.5px;
+}
+
+/* Lights Neon Glow Configurations */
+.red-light.active {
+    background-color: #ff1212;
+    box-shadow: 0 0 20px #ff1212, inset 0 0 10px #7a0000;
+}
+.red-light.active .light-text { color: #ffffff; text-shadow: 0 0 5px #fff; }
+
+.yellow-light.active {
+    background-color: #ffca18;
+    box-shadow: 0 0 20px #ffca18, inset 0 0 10px #8a6d00;
+}
+.yellow-light.active .light-text { color: #222222; font-weight: bold; }
+
+.green-light.active {
+    background-color: #00e676;
+    box-shadow: 0 0 20px #00e676, inset 0 0 10px #005c2b;
+}
+.green-light.active .light-text { color: #ffffff; text-shadow: 0 0 5px #fff; }
+
 
 .success { color: #2e7d32; }
 .error { color: #c62828; }

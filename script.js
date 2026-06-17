@@ -124,4 +124,28 @@ rsvpFormNode.addEventListener("submit", function(event) {
     });
 });
 
+// 4. RACING LIGHTS AUTOMATION LOOP
+const readyL = document.getElementById("readyLight");
+const setL = document.getElementById("setLight");
+const goL = document.getElementById("goLight");
+
+let currentLightPhase = 0;
+
+setInterval(() => {
+    // Alisin muna lahat ng active states
+    readyL.classList.remove("active");
+    setL.classList.remove("active");
+    goL.classList.remove("active");
+
+    if (currentLightPhase === 0) {
+        readyL.classList.add("active"); // Sindi Pula
+        currentLightPhase = 1;
+    } else if (currentLightPhase === 1) {
+        setL.classList.add("active");   // Sindi Dilaw
+        currentLightPhase = 2;
+    } else if (currentLightPhase === 2) {
+        goL.classList.add("active");    // Sindi Berde
+        currentLightPhase = 0;
+    }
+}, 2500); // Magpapalit ang ilaw kada 2.5 segundo
 
