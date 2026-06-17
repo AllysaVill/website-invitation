@@ -1,0 +1,302 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #fffae6; /* Cream/Soft Yellow Base */
+    color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Container */
+.invitation-container {
+    background-color: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    padding: 0 0 30px 0;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(225, 18, 33, 0.15); /* Soft Red Glow */
+    border: 4px solid #e11221; /* Jollibee Red */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Checkered Flag Graphic Ends */
+.checkered-flag {
+    background-image: 
+        linear-gradient(45deg, #000 25%, transparent 25%), 
+        linear-gradient(-45deg, #000 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #000 75%), 
+        linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: #fff;
+    height: 24px;
+    width: 100%;
+}
+
+.bottom-flag {
+    margin-top: 30px;
+}
+
+/* Audio Widget Control Button */
+.music-btn {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.music-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Typography & Hero */
+.hero-section {
+    padding: 25px 20px;
+}
+
+.main-title {
+    font-family: 'Bangers', cursive;
+    font-size: 2.8rem;
+    color: #e11221; /* Jollibee Red */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px #ffca18; /* Jollibee Yellow shadow */
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ffca18;
+    background-color: #e11221;
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 30px;
+}
+
+.theme-badge {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Countdown Timer */
+.countdown-section {
+    background-color: #ffca18; /* Jollibee Yellow */
+    padding: 20px;
+    margin: 10px 20px 25px 20px;
+    border-radius: 12px;
+    border: 2px dashed #e11221;
+}
+
+.countdown-section h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #e11221;
+    margin-bottom: 12px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.time-box {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 65px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.time-box span {
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.time-box p {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Event Details Layout */
+.details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 25px;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    background-color: #fff9e6;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 6px solid #ffca18;
+    text-align: left;
+}
+
+.detail-item h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #e11221;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: #111 !important;
+}
+
+/* Interactive Map Framework */
+.map-section {
+    padding: 0 25px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.map-section h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.map-wrapper {
+    border: 3px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* RSVP Form Custom Layout */
+.rsvp-section {
+    padding: 0 25px;
+}
+
+.rsvp-section h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #e11221;
+    letter-spacing: 0.5px;
+}
+
+#rsvpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+}
+
+#rsvpForm input, #rsvpForm select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #fafafa;
+    transition: border-color 0.2s;
+}
+
+#rsvpForm input:focus, #rsvpForm select:focus {
+    border-color: #e11221;
+}
+
+.submit-btn {
+    background-color: #e11221;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #c40f1c;
+    transform: translateY(-1px);
+}
+
+/* Feedback Notifications */
+#formFeedback {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Guest Headcount Dashboard Widget */
+.headcount-dashboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.counter-box {
+    background-color: #222222; /* Sleek black racing tire color block */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: 2px solid #ffca18;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#totalCount {
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    color: #ffca18; /* Bright yellow count display */
+    line-height: 1;
+}
+
+.counter-box p {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Adjust layout behavior when attendance selection is 'No' */
+#rsvpForm select:disabled {
+    background-color: #eaeaea;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+.success { color: #2e7d32; }
+.error { color: #c62828; }
+.hidden { display: none; }
