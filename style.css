@@ -538,7 +538,7 @@ body {
 
     .gallery-grid {
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 8px;
+        row-gap: 15px;
         column-gap: 8px;
     }
 
