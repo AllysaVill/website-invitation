@@ -149,3 +149,12 @@ setInterval(() => {
     }
 }, 2500); // Magpapalit ang ilaw kada 2.5 segundo
 
+// 5. OPENING AND CLOSING IMAGE
+function openImage(src) {
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("modalImage").src = src;
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}

@@ -85,6 +85,12 @@
             </div>
         </section>
 
+        <!-- Photo Popup -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-btn" onclick="closeImage()">&times;</span>
+            <img id="modalImage">
+        </div>
+
         <!-- Photo Gallery Section -->
         <section class="gallery-section">
             <h3>📸 Watch Me Grow!</h3>
@@ -93,11 +99,21 @@
             <div class="gallery-grid">
 
                 <div class="photo-card">
-                    <img src="Pictures/newborn.jpg" alt="Newborn">
+                    <img src="Pictures/newborn.jpg" alt="Newborn" onclick="openImage(this.src)">
+                    <p>Newborn</p>
                 </div>
-                <div class="photo-card">1 Month Old</div>
-                <div class="photo-card">2 Months Old</div>
-                <div class="photo-card">3 Months Old</div>
+                <div class="photo-card">
+                    <img src="Pictures/1month.jpg" alt="1month" onclick="openImage(this.src)">
+                    <p>1 Month Old</p>
+                </div>
+                <div class="photo-card">
+                    <img src="Pictures/2months.jpg" alt="2months" onclick="openImage(this.src)">
+                    <p>2 Months Old</p>
+                </div>
+                <div class="photo-card">
+                    <img src="Pictures/3months.jpg" alt="3months" onclick="openImage(this.src)">
+                    <p>3 Months Old</p>
+                </div>
 
                 <div class="photo-card">11 Months Old</div>
 
@@ -105,11 +121,17 @@
                     1 Year Old
                 </div>
 
-                <div class="photo-card">4 Months Old</div>
+                <div class="photo-card">
+                    <img src="Pictures/4months.jpg" alt="4months" onclick="openImage(this.src)">
+                    <p>4 Months Old</p>
+                </div>
 
                 <div class="photo-card">10 Months Old</div>
 
-                <div class="photo-card">5 Months Old</div>
+                <div class="photo-card">
+                    <img src="Pictures/5months.jpg" alt="5months" onclick="openImage(this.src)">
+                    <p>5 Months Old</p>
+                </div>
 
                 <div class="photo-card">9 Months Old</div>
                 <div class="photo-card">8 Months Old</div>
