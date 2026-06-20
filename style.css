@@ -529,29 +529,69 @@ body {
 .error { color: #c62828; }
 .hidden { display: none; }
 
-/* Mobile Layout */
-@media (max-width: 600px) {
+/* ================= MOBILE RESPONSIVE ================= */
+@media screen and (max-width: 600px) {
 
-    .gallery-grid {
-        gap: 6px;
+    .gallery-section {
+        padding: 0 10px;
     }
 
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 8px;
+        column-gap: 8px;
+    }
+
+    /* Monthly photos */
     .photo-card {
         width: 70px;
         height: 70px;
-    }
-
-    .center-card {
-        width: 150px;
-        height: 150px;
+        margin: 0;
+        border-width: 3px;
+        border-radius: 18px;
+        box-shadow:
+            0 0 0 3px #ffca18,
+            0 3px 8px rgba(0,0,0,.15);
     }
 
     .photo-card p {
-        font-size: 0.6rem;
+        font-size: .45rem;
+        padding: 1px;
+    }
+
+    /* Center photo */
+    .center-card {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 2;
+
+        width: 145px;
+        height: 145px;
+
+        border-width: 4px;
+        border-radius: 24px;
+
+        box-shadow:
+            0 0 0 4px #e11221,
+            0 5px 15px rgba(0,0,0,.2);
+    }
+
+    .center-card::before {
+        height: 12px;
+        background-size: 12px 12px;
     }
 
     .center-card p {
-        font-size: 0.9rem;
+        font-size: .8rem;
+        padding: 5px;
+    }
+
+    .gallery-section h3 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .gallery-subtitle {
+        font-size: .95rem;
     }
 
 }
