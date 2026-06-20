@@ -528,3 +528,30 @@ body {
 .success { color: #2e7d32; }
 .error { color: #c62828; }
 .hidden { display: none; }
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+
+    .gallery-grid {
+        gap: 6px;
+    }
+
+    .photo-card {
+        width: 70px;
+        height: 70px;
+    }
+
+    .center-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .photo-card p {
+        font-size: 0.6rem;
+    }
+
+    .center-card p {
+        font-size: 0.9rem;
+    }
+
+}
