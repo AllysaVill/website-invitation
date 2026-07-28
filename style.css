@@ -198,103 +198,84 @@ body {
 }
 
 /* RSVP Form Custom Layout */
+/* =========================
+   RSVP SECTION
+========================= */
+
 .rsvp-section {
-    padding: 0 25px;
+    margin-top: 40px;
+    padding: 35px 25px;
+    background: linear-gradient(135deg, #fffdf5, #fff7e6);
+    border: 4px solid #ffcc00;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .rsvp-section h3 {
-    font-family: 'Bangers', cursive;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    color: #d62828;
     margin-bottom: 15px;
-    color: #e11221;
-    letter-spacing: 0.5px;
 }
 
-#rsvpForm {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 100%;
+.rsvp-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
-#rsvpForm input, #rsvpForm select {
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.95rem;
-    outline: none;
-    background-color: #fafafa;
-    transition: border-color 0.2s;
-}
-
-#rsvpForm input:focus, #rsvpForm select:focus {
-    border-color: #e11221;
-}
+/* RSVP Button */
 
 .submit-btn {
-    background-color: #e11221;
-    color: #ffffff;
-    border: none;
-    padding: 14px;
+    display: inline-block;
+    padding: 16px 38px;
+    background: linear-gradient(135deg, #ff3b30, #ff8c00);
+    color: #fff;
+    text-decoration: none;
     font-size: 1.1rem;
-    border-radius: 8px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(255, 87, 34, 0.35);
     cursor: pointer;
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    transition: background 0.2s, transform 0.1s;
+    border: none;
 }
 
 .submit-btn:hover {
-    background-color: #c40f1c;
-    transform: translateY(-1px);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 87, 34, 0.45);
 }
 
-/* Feedback Notifications */
-#formFeedback {
-    margin-top: 12px;
-    font-size: 0.95rem;
-    font-weight: bold;
+.submit-btn:active {
+    transform: scale(0.96);
 }
 
-/* Guest Headcount Dashboard Widget */
-.headcount-dashboard {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.submit-btn::before {
+    content: "🏁 ";
 }
 
-.counter-box {
-    background-color: #222222; /* Sleek black racing tire color block */
-    color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 50px;
-    border: 2px solid #ffca18;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+/* Mobile */
 
-#totalCount {
-    font-family: 'Bangers', cursive;
-    font-size: 1.8rem;
-    color: #ffca18; /* Bright yellow count display */
-    line-height: 1;
-}
+@media (max-width: 768px) {
+    .rsvp-section {
+        padding: 25px 18px;
+    }
 
-.counter-box p {
-    font-size: 0.85rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    .rsvp-section h3 {
+        font-size: 1.6rem;
+    }
 
-/* Adjust layout behavior when attendance selection is 'No' */
-#rsvpForm select:disabled {
-    background-color: #eaeaea;
-    cursor: not-allowed;
-    opacity: 0.6;
+    .rsvp-section p {
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        font-size: 1rem;
+    }
 }
 
 /* Racing Lights Custom Design */
@@ -424,6 +405,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .photo-card p {
@@ -472,7 +454,6 @@ body {
         linear-gradient(45deg, transparent 75%, #000 75%),
         linear-gradient(-45deg, transparent 75%, #000 75%);
     background-size: 15px 15px;
-    /* background-position: 0 0, 0 10px, 10px -10px, -10px 0; */
 }
 
 .center-card img {
@@ -520,14 +501,6 @@ body {
     color: white;
     cursor: pointer;
 }
-
-.photo-card img {
-    cursor: pointer;
-}
-
-.success { color: #2e7d32; }
-.error { color: #c62828; }
-.hidden { display: none; }
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media screen and (max-width: 600px) {
@@ -594,4 +567,46 @@ body {
         font-size: .95rem;
     }
 
+}
+
+/* ================= COUNTDOWN RESPONSIVE ================= */
+@media screen and (max-width: 600px) {
+
+    #countdown {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        min-width: 60px;
+        padding: 8px;
+    }
+
+    .time-box span {
+        font-size: 1.5rem;
+    }
+
+    .time-box p {
+        font-size: 0.65rem;
+    }
+
+}
+
+/* Para sa mas maliliit pang phone */
+@media screen and (max-width: 400px) {
+
+    #countdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .time-box {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .time-box span {
+        font-size: 1.7rem;
+    }
 }

@@ -1,6 +1,6 @@
 // 1. PARTY COUNTDOWN TIMER SETUP
-// Configured to target January 16, 2027 at 4:00 PM (16:00)
-const eventDate = new Date("January 16, 2027 15:00:00").getTime();
+// Configured to target January 16, 2027 at 2:30 PM
+const eventDate = new Date("January 16, 2027 13:30:00").getTime();
 
 const updateCountdown = () => {
     const now = new Date().getTime();
@@ -158,3 +158,48 @@ function openImage(src) {
 function closeImage() {
     document.getElementById("imageModal").style.display = "none";
 }
+
+// Confetti with different shapes
+// setInterval(()=>{
+//     const now = new Date().getTime();
+//     const diff = targetDate - now;
+//     const days = Math.floor(diff/(1000*60*60*24));
+//     const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+//     const minutes = Math.floor((diff%(1000*60*60))/(1000*60));
+//     const seconds = Math.floor((diff%(1000*60))/1000);
+//     daysEl.innerText = days.toString().padStart(2,'0');
+//     hoursEl.innerText = hours.toString().padStart(2,'0');
+//     minutesEl.innerText = minutes.toString().padStart(2,'0');
+//     secondsEl.innerText = seconds.toString().padStart(2,'0');
+// }, 1000);
+  
+// function createConfetti(){
+//     const colors=['#ff0','#0ff','#f0f','#0f0','#f00','#00f','#ff6b6b','#ffd93d'];
+//     const shapes=['square','circle','star'];
+//     for(let i=0;i<40;i++){
+//       const confetti=document.createElement('div');
+//       confetti.className='confetti';
+      
+//       // Random size
+//       const size = Math.floor(Math.random()*12)+8;
+//       confetti.style.width = size+"px";
+//       confetti.style.height = size+"px";
+      
+//       // Random shape
+//       const shape = shapes[Math.floor(Math.random()*shapes.length)];
+//       if(shape==='circle'){ confetti.style.borderRadius="50%"; }
+//       if(shape==='star'){
+//         confetti.style.clipPath="polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)";
+//       }
+      
+//       // Position and animation
+//       confetti.style.left=Math.random()*100+'vw';
+//       confetti.style.background=colors[Math.floor(Math.random()*colors.length)];
+//       confetti.style.animationDuration=(3+Math.random()*3)+'s';
+      
+//       document.body.appendChild(confetti);
+//       setTimeout(()=>confetti.remove(),6000);
+//     }
+//   }
+//   setInterval(createConfetti,1200);
+//   createConfetti();

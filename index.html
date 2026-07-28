@@ -59,7 +59,7 @@
             <div class="detail-item">
                 <h4>🏁 Pit Stop Details</h4>
                 <p class="highlight-text">Saturday, January 16, 2027</p>
-                <p>Party Starts at 4:00 PM</p>
+                <p>Party Starts at 2:00 PM</p>
             </div>
             <div class="detail-item">
                 <h4>📍 Race Track Venue</h4>
@@ -136,48 +136,29 @@
                 <div class="photo-card">9 Months Old</div>
                 <div class="photo-card">8 Months Old</div>
                 <div class="photo-card">7 Months Old</div>
-                <div class="photo-card">6 Months Old</div>
+                <div class="photo-card">
+                    <img src="Pictures/6months.jpg" alt="6months" onclick="openImage(this.src)">
+                    <p>6 Months Old</p>
+                </div>
 
             </div>
         </section>
 
         <!-- RSVP Section -->
+        <!-- RSVP Section -->
         <section class="rsvp-section">
             <h3>Reserve Your Pit Pass!</h3>
-            
-            <!-- Dynamic Guest Dashboard Track Counter -->
-            <div class="headcount-dashboard">
-                <div class="counter-box">
-                    <span id="totalCount">0</span>
-                    <p>Drivers Confirmed</p>
-                </div>
-            </div>
-
-            <!-- Update the action attribute below with your unique Formspree URL -->
-            <form id="rsvpForm" action="https://formspree.io/f/xdavjrga" method="POST">
-    
-                <label for="guestName" class="visually-hidden">Driver Name</label>
-                <input type="text" id="guestName" name="Driver_Name" placeholder="Driver / Family Name" required>
-                
-                <label for="attendance" class="visually-hidden">Attendance Status</label>
-                <select id="attendance" name="Attendance_Status" required>
-                    <option value="" disabled selected>Lock In Attendance</option>
-                    <option value="yes">Joining the Race (Yes)</option>
-                    <option value="no">Stuck in Pit Lane (No)</option>
-                </select>
-
-                <label for="guestCount" class="visually-hidden">Number of Pit Passes</label>
-                <select id="guestCount" name="Pit_Passes_Needed" required>
-                    <option value="" disabled selected>Number of Pit Passes Needed</option>
-                    <option value="1">1 Person</option>
-                    <option value="2">2 People</option>
-                    <option value="3">3 People</option>
-                </select>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Submit RSVP</button>
-            </form>
-            <div id="formFeedback" class="hidden"></div>
-        </section>        
+        
+            <p>
+                Click the button below to reserve your pit pass.
+            </p>
+        
+            <a href="https://forms.gle/jSuUxJcSy5d9b9D66"
+               target="_blank"
+               class="submit-btn">
+               🏁 RSVP Now
+            </a>
+        </section>
 
         <p class="car">🏎️ </p>
         
