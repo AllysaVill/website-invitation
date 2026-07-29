@@ -202,8 +202,12 @@ body {
    RSVP SECTION
 ========================= */
 
+.rsvp-wrapper {
+    padding: 0 25px;
+    margin-bottom: 30px;
+}
+
 .rsvp-section {
-    margin-top: 40px;
     padding: 35px 25px;
     background: linear-gradient(135deg, #fffdf5, #fff7e6);
     border: 4px solid #ffcc00;
