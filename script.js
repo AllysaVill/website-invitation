@@ -1,6 +1,6 @@
 // 1. PARTY COUNTDOWN TIMER SETUP
-// Configured to target January 16, 2027 at 2:30 PM
-const eventDate = new Date("January 16, 2027 13:30:00").getTime();
+// Configured to target January 16, 2027 at 2:00 PM
+const eventDate = new Date("January 16, 2027 14:00:00").getTime();
 
 const updateCountdown = () => {
     const now = new Date().getTime();
@@ -55,25 +55,72 @@ const readyL = document.getElementById("readyLight");
 const setL = document.getElementById("setLight");
 const goL = document.getElementById("goLight");
 
+// Birthday date
+const birthday = new Date("January 16, 2027 14:00:00");
+
 let currentLightPhase = 0;
 
-setInterval(() => {
-    // Alisin muna lahat ng active states
+// setInterval(() => {
+//     // Alisin muna lahat ng active states
+//     readyL.classList.remove("active");
+//     setL.classList.remove("active");
+//     goL.classList.remove("active");
+
+//     if (currentLightPhase === 0) {
+//         readyL.classList.add("active"); // Sindi Pula
+//         currentLightPhase = 1;
+//     } else if (currentLightPhase === 1) {
+//         setL.classList.add("active");   // Sindi Dilaw
+//         currentLightPhase = 2;
+//     } else if (currentLightPhase === 2) {
+//         goL.classList.add("active");    // Sindi Berde
+//         currentLightPhase = 0;
+//     }
+// }, 2500); // Magpapalit ang ilaw kada 2.5 segundo
+
+// Function para sindihan ang GO lang
+function showGoLight() {
     readyL.classList.remove("active");
     setL.classList.remove("active");
-    goL.classList.remove("active");
+    goL.classList.add("active");
+}
 
-    if (currentLightPhase === 0) {
-        readyL.classList.add("active"); // Sindi Pula
-        currentLightPhase = 1;
-    } else if (currentLightPhase === 1) {
-        setL.classList.add("active");   // Sindi Dilaw
-        currentLightPhase = 2;
-    } else if (currentLightPhase === 2) {
-        goL.classList.add("active");    // Sindi Berde
-        currentLightPhase = 0;
-    }
-}, 2500); // Magpapalit ang ilaw kada 2.5 segundo
+// Kapag birthday na, GO na agad
+if (new Date() >= birthday) {
+
+    showGoLight();
+
+} else {
+
+    const lightInterval = setInterval(() => {
+
+        // Kung dumating na ang birthday habang bukas ang page
+        if (new Date() >= birthday) {
+            clearInterval(lightInterval);
+            showGoLight();
+            return;
+        }
+
+        readyL.classList.remove("active");
+        setL.classList.remove("active");
+        goL.classList.remove("active");
+
+        if (currentLightPhase === 0) {
+            readyL.classList.add("active");
+            currentLightPhase = 1;
+
+        } else if (currentLightPhase === 1) {
+            setL.classList.add("active");
+            currentLightPhase = 2;
+
+        } else {
+            goL.classList.add("active");
+            currentLightPhase = 0;
+        }
+
+    }, 2000);
+
+}
 
 // 5. OPENING AND CLOSING IMAGE
 function openImage(src) {
