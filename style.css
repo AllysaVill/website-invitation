@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #fffae6; /* Cream/Soft Yellow Base */
+    background-color: #fffae6;
     color: #222222;
     display: flex;
     justify-content: center;
@@ -23,8 +23,8 @@ body {
     width: 100%;
     padding: 0 0 30px 0;
     border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(225, 18, 33, 0.15); /* Soft Red Glow */
-    border: 4px solid #e11221; /* Jollibee Red */
+    box-shadow: 0 15px 35px rgba(225, 18, 33, 0.15);
+    border: 4px solid #e11221;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -73,9 +73,9 @@ body {
 .main-title {
     font-family: 'Bangers', cursive;
     font-size: 2.8rem;
-    color: #e11221; /* Jollibee Red */
+    color: #e11221;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 0px #ffca18; /* Jollibee Yellow shadow */
+    text-shadow: 2px 2px 0px #ffca18;
     margin: 10px 0;
 }
 
@@ -100,7 +100,7 @@ body {
 
 /* Countdown Timer */
 .countdown-section {
-    background-color: #ffca18; /* Jollibee Yellow */
+    background-color: #ffca18;
     padding: 20px;
     margin: 10px 20px 25px 20px;
     border-radius: 12px;
@@ -197,11 +197,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* RSVP Form Custom Layout */
-/* =========================
-   RSVP SECTION
-========================= */
-
+/* RSVP Layout */
 .rsvp-wrapper {
     padding: 0 25px;
     margin-bottom: 30px;
@@ -230,7 +226,6 @@ body {
 }
 
 /* RSVP Button */
-
 .submit-btn {
     display: inline-block;
     padding: 16px 38px;
@@ -260,7 +255,6 @@ body {
 }
 
 /* Mobile */
-
 @media (max-width: 768px) {
     .rsvp-section {
         padding: 25px 18px;
@@ -423,7 +417,7 @@ body {
     padding: 2px;
 }
 
-/* ===== CENTER PHOTO ===== */
+/* Center Photo */
 
 .center-card {
     grid-column: 2 / span 2;
@@ -474,7 +468,6 @@ body {
     color: #ffca18;
     font-family: 'Bangers', cursive;
     font-size: 1rem;
-    /* letter-spacing: 1px; */
     padding: 8px;
 }
 
@@ -506,7 +499,7 @@ body {
     cursor: pointer;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* Mobile Responsive */
 @media screen and (max-width: 600px) {
 
     .gallery-section {
@@ -573,7 +566,7 @@ body {
 
 }
 
-/* ================= COUNTDOWN RESPONSIVE ================= */
+/* Countdown Responsive */
 @media screen and (max-width: 600px) {
 
     #countdown {
@@ -596,7 +589,6 @@ body {
 
 }
 
-/* Para sa mas maliliit pang phone */
 @media screen and (max-width: 400px) {
 
     #countdown {

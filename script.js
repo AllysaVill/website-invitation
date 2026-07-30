@@ -1,24 +1,21 @@
 // 1. PARTY COUNTDOWN TIMER SETUP
-// Configured to target January 16, 2027 at 2:00 PM
+// January 16, 2027 at 2:00 PM
 const eventDate = new Date("January 16, 2027 14:00:00").getTime();
 
 const updateCountdown = () => {
     const now = new Date().getTime();
     const timeLeft = eventDate - now;
 
-    // Direct mathematical conversions
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Dynamic node text updates
     document.getElementById("days").innerText = days < 10 ? "0" + days : days;
     document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
     document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
 
-    // Check expiration frame
     if (timeLeft < 0) {
         clearInterval(timerInterval);
         document.getElementById("countdown").innerHTML = "<h4 style='color: #e11221; font-weight:800;'>The Green Flag Has Waved! The Race is On!</h4>";
@@ -33,7 +30,6 @@ const timerInterval = setInterval(updateCountdown, 1000);
 const bgMusic = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
 
-// Handle modern browser autoplay constraints
 window.addEventListener('click', () => {
     if (bgMusic.paused && musicToggle.innerText === "🔊 Mute Track") {
         bgMusic.play().catch(err => console.log("Audio autoplay waiting for interactions."));
@@ -50,18 +46,16 @@ musicToggle.addEventListener("click", () => {
     }
 });
 
-// 4. RACING LIGHTS AUTOMATION LOOP
+// 3. RACING LIGHTS AUTOMATION LOOP
 const readyL = document.getElementById("readyLight");
 const setL = document.getElementById("setLight");
 const goL = document.getElementById("goLight");
 
-// Birthday date
 const birthday = new Date("January 16, 2027 14:00:00");
 
 let currentLightPhase = 0;
 
 // setInterval(() => {
-//     // Alisin muna lahat ng active states
 //     readyL.classList.remove("active");
 //     setL.classList.remove("active");
 //     goL.classList.remove("active");
@@ -76,16 +70,14 @@ let currentLightPhase = 0;
 //         goL.classList.add("active");    // Sindi Berde
 //         currentLightPhase = 0;
 //     }
-// }, 2500); // Magpapalit ang ilaw kada 2.5 segundo
+// }, 2500);
 
-// Function para sindihan ang GO lang
 function showGoLight() {
     readyL.classList.remove("active");
     setL.classList.remove("active");
     goL.classList.add("active");
 }
 
-// Kapag birthday na, GO na agad
 if (new Date() >= birthday) {
 
     showGoLight();
@@ -94,7 +86,6 @@ if (new Date() >= birthday) {
 
     const lightInterval = setInterval(() => {
 
-        // Kung dumating na ang birthday habang bukas ang page
         if (new Date() >= birthday) {
             clearInterval(lightInterval);
             showGoLight();
@@ -122,7 +113,7 @@ if (new Date() >= birthday) {
 
 }
 
-// 5. OPENING AND CLOSING IMAGE
+// 4. OPENING AND CLOSING IMAGE
 function openImage(src) {
     document.getElementById("imageModal").style.display = "flex";
     document.getElementById("modalImage").src = src;
