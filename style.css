@@ -129,7 +129,7 @@ body {
 }
 
 .time-box span {
-    font-family: 'Bangers', cursive;
+    font-family: 'Chewy', cursive;
     font-size: 1.8rem;
     color: #222;
 }
@@ -333,7 +333,7 @@ body {
 }
 
 .seat-number span {
-    font-family: 'Bangers', cursive;
+    font-family: 'Chewy', cursive;
     font-size: 4rem;
     color: #ffffff;
     line-height: 1;
@@ -418,7 +418,7 @@ body {
 }
 
 .light-text {
-    font-family: 'Bangers', cursive;
+    font-family: 'Chewy', cursive;
     font-size: 0.75rem;
     color: rgba(255,255,255,0.2);
     letter-spacing: 0.5px;
@@ -578,7 +578,7 @@ body {
     width: 100%;
     background: #e11221;
     color: #ffca18;
-    font-family: 'Bangers', cursive;
+    font-family: 'Chewy', cursive;
     font-size: 1rem;
     padding: 8px;
 }
