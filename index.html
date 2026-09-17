@@ -127,7 +127,10 @@
 
                 <div class="photo-card">9 Months Old</div>
                 <div class="photo-card">8 Months Old</div>
-                <div class="photo-card">7 Months Old</div>
+                <div class="photo-card">
+                    <img src="Pictures/7months.jpeg" alt="7months" onclick="openImage(this.src)">
+                    <p>7 Months Old</p>
+                </div>
                 <div class="photo-card">
                     <img src="Pictures/6months.jpg" alt="6months" onclick="openImage(this.src)">
                     <p>6 Months Old</p>
@@ -136,22 +139,18 @@
             </div>
         </section>
 
-        <!-- RSVP Section -->
-        <section class="rsvp-wrapper">
-            <div class="rsvp-section">
-                <h3>Reserve Your Pit Pass!</h3>
-        
-                <p>
-                    Click the button below to reserve your pit pass.
-                </p>
-            
-                <a href="https://forms.gle/jSuUxJcSy5d9b9D66"
-                target="_blank"
-                class="submit-btn">
-                RSVP Now
-                </a>
+        <!-- Reserved Seats Section -->
+        <section class="reserved-seats-wrapper">
+            <div class="reserved-seats-section">
+                <h3>Your Reserved Seats</h3>
+
+                <div class="seat-number">
+                    <span id="reservedSeats">1</span>
+                </div>
+
+                <p>Seats Reserved For You</p>
+                <small>Please present this invitation at the party.</small>
             </div>
-            
         </section>
 
         <p class="car">🏎️ </p>

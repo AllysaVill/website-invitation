@@ -122,3 +122,9 @@ function openImage(src) {
 function closeImage() {
     document.getElementById("imageModal").style.display = "none";
 }
+
+// Get reserved seats from URL
+const urlParams = new URLSearchParams(window.location.search);
+const seats = urlParams.get("seats") || "1";
+
+document.getElementById("reservedSeats").textContent = seats;

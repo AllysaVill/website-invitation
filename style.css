@@ -198,7 +198,7 @@ body {
 }
 
 /* RSVP Layout */
-.rsvp-wrapper {
+/* .rsvp-wrapper {
     padding: 0 25px;
     margin-bottom: 30px;
 }
@@ -223,10 +223,10 @@ body {
     color: #555;
     margin-bottom: 30px;
     line-height: 1.6;
-}
+}*/
 
 /* RSVP Button */
-.submit-btn {
+/* .submit-btn {
     display: inline-block;
     padding: 16px 38px;
     background: linear-gradient(135deg, #ff3b30, #ff8c00);
@@ -252,10 +252,10 @@ body {
 
 .submit-btn::before {
     content: "🏁 ";
-}
+} */
 
 /* Mobile */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .rsvp-section {
         padding: 25px 18px;
     }
@@ -273,6 +273,118 @@ body {
         width: 100%;
         padding: 16px;
         font-size: 1rem;
+    }
+} */
+
+/* Reserved Seats */
+.reserved-seats-wrapper {
+    padding: 0 25px;
+    margin-bottom: 30px;
+}
+
+.reserved-seats-section {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #fffdf5, #fff7e6);
+    border: 4px solid #ffca18;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.reserved-seats-section::before,
+.reserved-seats-section::after {
+    content: "🏁";
+    position: absolute;
+    font-size: 2rem;
+    top: 15px;
+}
+
+.reserved-seats-section::before {
+    left: 20px;
+}
+
+.reserved-seats-section::after {
+    right: 20px;
+}
+
+.reserved-seats-section h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: #e11221;
+    text-shadow: 2px 2px #ffca18;
+    margin-bottom: 15px;
+}
+
+.seat-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    margin: 10px auto 15px;
+    background: #e11221;
+    border: 6px solid #ffca18;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 5px #222,
+        0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.seat-number span {
+    font-family: 'Bangers', cursive;
+    font-size: 4rem;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.reserved-seats-section p {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.reserved-seats-section small {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Reserved Seats Mobile */
+@media screen and (max-width: 600px) {
+
+    .reserved-seats-wrapper {
+        padding: 0 20px;
+        margin-bottom: 25px;
+    }
+
+    .reserved-seats-section {
+        padding: 25px 15px;
+        border-radius: 22px;
+    }
+
+    .reserved-seats-section h3 {
+        font-size: 1.7rem;
+    }
+
+    .seat-number {
+        width: 95px;
+        height: 95px;
+        border-width: 5px;
+    }
+
+    .seat-number span {
+        font-size: 3.4rem;
+    }
+
+    .reserved-seats-section p {
+        font-size: 1rem;
+    }
+
+    .reserved-seats-section small {
+        font-size: 0.75rem;
     }
 }
 
